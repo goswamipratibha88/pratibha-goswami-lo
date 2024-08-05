@@ -1,0 +1,56 @@
+body {
+    background-color: lightgrey;
+    border: 10px groove brown;
+}
+
+.image {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 5px solid #555;
+
+}
+
+h1 {
+    color: brown;
+    font-family: Playfair Display;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 1000;
+}
+
+h2 {
+    font-weight: 800;
+    color: darkolivegreen;
+}
+
+p {
+    width: fit-content;
+    color: darkslategray;
+    font-weight: 500;
+    font-style: oblique;
+    font-size: large;
+}
+
+section {
+    margin: 50px;
+}
+
+a {
+    color: fuchsia;
+}
+
+li {
+    color: darkslategray;
+    font-size: large;
+    margin: 10px;
+}
+
+ul {
+    list-style-type: square;
+    background-color: burlywood;
+    width: fit-content;
+    margin: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
