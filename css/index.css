@@ -1,5 +1,6 @@
 body {
     background-color: lightgrey;
+    width: fit-content;
     border: 10px groove brown;
 }
 
@@ -37,20 +38,37 @@ section {
 }
 
 a {
-    color: fuchsia;
+    color:blue;
 }
 
 li {
     color: darkslategray;
     font-size: large;
     margin: 10px;
+
 }
 
 ul {
     list-style-type: square;
-    background-color: burlywood;
-    width: fit-content;
+    height: 200px;
     margin: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+.columns {
+    background-color: burlywood;
+    width:auto;
+    display: flex;
+}
+
+div.column2 li {
+    margin-bottom: 70px;
+}
+
+div.connect {
+    display: flex;
+   gap : 50px;
+    background-color: burlywood;
+    padding: 30px;
 }
