@@ -4,6 +4,7 @@ body {
     border: 10px groove brown;
 }
 
+
 .image {
     display: block;
     margin: 0 auto;
@@ -38,7 +39,7 @@ section {
 }
 
 a {
-    color:blue;
+    color: blue;
 }
 
 li {
@@ -58,7 +59,7 @@ ul {
 
 .columns {
     background-color: burlywood;
-    width:auto;
+    width: auto;
     display: flex;
 }
 
@@ -68,7 +69,101 @@ div.column2 li {
 
 div.connect {
     display: flex;
-   gap : 50px;
+    gap: 50px;
     background-color: burlywood;
     padding: 30px;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        background-color: cadetblue;
+        border: 3px double darkblue;
+    }
+
+    h1 {
+        color: midnightblue;
+        font-family: cursive;
+    }
+
+    h2 {
+        color: navy;
+    }
+
+    p {
+        color: black;
+    }
+
+    ul {
+        margin: 10px;
+    }
+
+    .columns {
+        background-color: lemonchiffon;
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 20px;
+
+    }
+
+    div.connect {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        background-color: lemonchiffon;
+        padding: 10px;
+        column-gap: normal;
+
+    }
+
+    .columns>div {
+        border: 1px solid black;
+        background-color: aquamarine;
+
+    }
+
+    .connect>p {
+
+        border: 1px solid black;
+        background-color: aquamarine;
+        padding: 10px;
+    }
+
+
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    body {
+        background: pink;
+        border: 6px solid darkslategray;
+
+    }
+
+    h1 {
+        color: darkgreen;
+        font-family: sans-serif;
+    }
+
+    h2 {
+        color: indigo;
+    }
+
+    ul {
+        margin: 20px;
+    }
+
+    .columns {
+        background-color: lightblue;
+    }
+
+    div.connect {
+        display: grid;
+        grid-template-rows: 30px 30px 30px;
+        background-color: lightblue;
+        gap: 10px;
+    }
+    a{
+        color: darkmagenta;
+    }
+
+}
 }
