@@ -152,7 +152,7 @@ div.connect {
     }
 
     .columns {
-        background-color: lightblue;
+        background-color:lightblue;
     }
 
     div.connect {
@@ -166,4 +166,31 @@ div.connect {
     }
 
 }
+
+input[type="text"], input[type = "email"]{
+    width : 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid azure;
+    box-sizing:content-box;
+}
+
+textarea{
+    width : 50%;
+    height:100px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid azure;
+    box-sizing:content-box;
+}
+
+button[type = "submit"]{
+   background-color: rgb(59, 216, 59);
+   width: 20%;
+   padding: 14px 20px;
+   margin: 8px 0;
+   border-color: darkcyan;
+   cursor: pointer;
+   font-size: medium;
+
 }
