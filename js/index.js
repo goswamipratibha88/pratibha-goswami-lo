@@ -63,5 +63,33 @@ removeButton.innerText ="Remove";
     });
 
 
-    // index.js:59 Uncaught DOMException: Failed to execute 'appendChild' on 'Node': This node type does not support this method.
-    // at HTMLFormElement.<anonymous> (file:///Users/pratibhagoswami/CodeVS/pratibha-goswami-lo/js/index.js:59:16)
+    
+    fetch('https://api.github.com/users/goswamipratibha88/repos')
+    .then((response) => {
+        if (response.ok) {
+            return response.text();
+        } else {
+            throw new Error('Failed  to fetch');
+        }
+    })
+    .then((data) => {
+        const repositories = JSON.parse(data);
+        console.log(repositories);
+
+        let projectSection = document.getElementById("projects");
+        let projectList = document.createElement("ul");
+        projectSection.appendChild(projectList);
+
+
+        for (let i = 0; i < repositories.length; i++) {
+            let project = document.createElement("li");
+            project.innerText = repositories[i]["name"]
+            projectList.appendChild(project);
+        }
+    })
+    .catch((error) => {
+        console.error("Error fetching data:", error.message);
+    })
+
+
+
