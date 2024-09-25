@@ -156,10 +156,10 @@ textarea {
     box-sizing: content-box;
 }
 
-button[type="submit"] {
-    background-color: cornflowerblue;
+#submitbutton{
+    background-color: rgb(66, 211, 218);
     width: 10vw;
-    padding: 1vw 4vh;
+    padding: 1vw 2vh;
     margin: 1vw 0;
     border-color: darkcyan;
     cursor: pointer;
@@ -222,6 +222,28 @@ span {
         background-color: lightcyan;
         float: center;
         border: 10px groove gray;
+    }
+
+    nav a {
+        display: none;
+    }
+
+    #Projects ul,
+    .connect {
+    list-style-type: square;
+    display: grid;
+    grid-template-columns: auto ;
+    }
+
+    #submitbutton{
+  
+        width: 5vw;
+        padding: 0;
+        margin: 0 0;
+        border-color: darkcyan;
+        cursor: pointer;
+        font-size:x-small;
+    
     }
 
 }
