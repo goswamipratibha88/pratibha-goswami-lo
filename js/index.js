@@ -64,7 +64,7 @@ fetch('https://api.github.com/users/goswamipratibha88/repos')
 
 let messageForm = document.getElementById("leave_message");
 messageForm.addEventListener('submit', function (event) {
-    event.preventDefault();
+    //event.preventDefault();
     let name = event.target.usersName.value;
     let email = event.target.usersEmail.value;
     let userMessage = event.target.usersMessage.value;
