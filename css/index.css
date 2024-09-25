@@ -1,24 +1,42 @@
 body {
-    background-color: lightgrey;
-    width: fit-content;
-    border: 10px groove brown;
+    background-color: white;
+    width: 82vw;
+    float: center;
+    border: 10px groove gray;
+    margin: 5vw 8vw 5vw 8vw;
 }
 
+nav {
+    padding-top: 2%;
+}
+
+nav a {
+
+    color: darkblue;
+    padding-top: 4vw;
+    padding: 1vw;
+}
+
+a:hover {
+    background-color: lightblue;
+    color: black;
+    font-weight: 300;
+}
+
+h1 {
+    color: #555;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 1000;
+    padding-top: 3%;
+}
 
 .image {
     display: block;
     margin: 0 auto;
     border-radius: 50%;
     border: 5px solid #555;
-
-}
-
-h1 {
-    color: brown;
-    font-family: Playfair Display;
-    font-size: 40px;
-    text-align: center;
-    font-weight: 1000;
 }
 
 h2 {
@@ -26,171 +44,175 @@ h2 {
     color: darkolivegreen;
 }
 
-p {
-    width: fit-content;
-    color: darkslategray;
-    font-weight: 500;
-    font-style: oblique;
-    font-size: large;
-}
-
 section {
-    margin: 50px;
+    margin: 60px;
+
 }
 
-a {
-    color: blue;
-}
-
-li {
-    color: darkslategray;
+#About div {
+    font-family: 'Times New Roman';
     font-size: large;
-    margin: 10px;
+    display: block;
+    background-image: linear-gradient(#EDF1F4, #C3CBDC);
+    padding: 2%;
+    margin: 2%;
+    width: 68vw;
 
 }
 
-ul {
-    list-style-type: square;
-    height: 200px;
-    margin: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+#Experience p {
+    font-family: 'Times New Roman';
+    font-size: large;
+    padding-left: 2vw;
 }
 
 .columns {
-    background-color: burlywood;
-    width: auto;
+    background-image: linear-gradient(#EDF1F4, #C3CBDC);
+    width: 68vw;
     display: flex;
+    padding: 2%;
+    margin: 2%;
+    font-family: 'Times New Roman';
+    font-size: large;
 }
 
 div.column2 li {
-    margin-bottom: 70px;
+    margin-bottom: 50px;
+    padding-top: 2%;
 }
 
-div.connect {
-    display: flex;
-    gap: 50px;
-    background-color: burlywood;
-    padding: 30px;
+/* skills and project section lists */
+
+
+/* #projects ul { */
+#Skills ul,
+#Projects ul,
+.connect {
+    list-style-type: square;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-image: linear-gradient(#EDF1F4, #C3CBDC);
+    width: 66vw;
+    gap: 1vw;
+    padding: 2%;
+    padding-left: 5%;
+    margin: 2%;
+    font-family: 'Times New Roman';
+    font-size: large;
+
+
 }
+
+#Skills li,
+#Projects li {
+    margin-left: 1%;
+    padding: 2%;
+
+}
+
+
+/* style for input fields under Leave a message */
+
+#leave_message {
+    background-image: linear-gradient(#EDF1F4, #C3CBDC);
+    padding: 2%;
+    margin: 2%;
+    width: 68VW;
+    font-family: 'Times New Roman';
+    font-size: large;
+}
+
+
+#usersName,
+#usersEmail,
+#usersMessage {
+    border-color: gray;
+}
+
+
+input[type="text"],
+input[type="email"] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid azure;
+    box-sizing: content-box;
+}
+
+textarea {
+    width: 50%;
+    height: 100px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid azure;
+    box-sizing: content-box;
+}
+
+button[type="submit"] {
+    background-color: cornflowerblue;
+    width: 10vw;
+    padding: 1vw 4vh;
+    margin: 1vw 0;
+    border-color: darkcyan;
+    cursor: pointer;
+    font-size: medium;
+
+}
+
+#viewmessages ul {
+    background-image: linear-gradient(#EDF1F4, #C3CBDC);
+    padding: 2%;
+    margin: 2%;
+    width: 68VW;
+    font-family: 'Times New Roman';
+    font-size: large;
+}
+
+#viewmessages li {
+    color: darkcyan;
+
+
+}
+
+#viewmessages button {
+    background-color: peru;
+    width: 10%;
+    padding: 1% 2%;
+    margin: 1% 0;
+    border-color: darkcyan;
+    cursor: pointer;
+    font-size: medium;
+}
+
+
+span {
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+.footer>p {
+    background-image: linear-gradient(#a9d4f4, #749aec);
+    padding: 2%;
+    font-family: 'Times New Roman';
+    font-size: large;
+    text-align: center;
+}
+
 
 
 @media (max-width: 768px) {
     body {
-        background-color: cadetblue;
-        border: 3px double darkblue;
+        background-color: lightcyan;
+        float: center;
+        border: 10px groove gray;
     }
-
-    h1 {
-        color: midnightblue;
-        font-family: cursive;
-    }
-
-    h2 {
-        color: navy;
-    }
-
-    p {
-        color: black;
-    }
-
-    ul {
-        margin: 10px;
-    }
-
-    .columns {
-        background-color: lemonchiffon;
-        display: grid;
-        grid-template-columns: 3fr 1fr;
-        gap: 20px;
-
-    }
-
-    div.connect {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        background-color: lemonchiffon;
-        padding: 10px;
-        column-gap: normal;
-
-    }
-
-    .columns>div {
-        border: 1px solid black;
-        background-color: aquamarine;
-
-    }
-
-    .connect>p {
-
-        border: 1px solid black;
-        background-color: aquamarine;
-        padding: 10px;
-    }
-
 
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
     body {
-        background: pink;
+        background-color: beige;
         border: 6px solid darkslategray;
 
     }
-
-    h1 {
-        color: darkgreen;
-        font-family: sans-serif;
-    }
-
-    h2 {
-        color: indigo;
-    }
-
-    ul {
-        margin: 20px;
-    }
-
-    .columns {
-        background-color:lightblue;
-    }
-
-    div.connect {
-        display: grid;
-        grid-template-rows: 30px 30px 30px;
-        background-color: lightblue;
-        gap: 10px;
-    }
-    a{
-        color: darkmagenta;
-    }
-
-}
-
-input[type="text"], input[type = "email"]{
-    width : 50%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    border: 1px solid azure;
-    box-sizing:content-box;
-}
-
-textarea{
-    width : 50%;
-    height:100px;
-    padding: 12px 20px;
-    margin: 8px 0;
-    border: 1px solid azure;
-    box-sizing:content-box;
-}
-
-button[type = "submit"]{
-   background-color: rgb(59, 216, 59);
-   width: 20%;
-   padding: 14px 20px;
-   margin: 8px 0;
-   border-color: darkcyan;
-   cursor: pointer;
-   font-size: medium;
-
 }
