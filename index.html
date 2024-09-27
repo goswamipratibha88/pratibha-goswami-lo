@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title></title>
+    <title>Portfolio Project</title>
     <meta charset="UTF-8">
     <meta name="author" content="Pratibha">
     <meta name="description" content="About Myself">
@@ -10,37 +10,62 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Audiowide|Playfair Display|Trirong|Kalnia Glaze">
-</head>
 
 <body>
-    <header>
+    <header class="header">
         <nav class="navbar">
-            <a href="#About">ABOUT</a> 
-            <a href="#Experience">EXPERIENCE</a> 
-            <a href="#Connect">CONNECT</a> 
-            <a href="#Skills">SKILLS</a> 
-            <a href="#Projects">PROJECT</a> 
-            <a href="#Leaveamsg">LEAVE A MESSAGE</a> 
-            <a href="#viewmessages">VIEW MESSAGE</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#About" class="nav-link">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#Experience" class="nav-link">EXPERIENCE</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#Connect" class="nav-link">CONNECT</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#Skills" class="nav-link">SKILLS</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#Projects" class="nav-link">PROJECT</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#Leaveamsg" class="nav-link">LEAVE A MESSAGE</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
 
+    </header>
+
+    <div>
         <h1>PRATIBHA GOSWAMI</h1>
 
         <img src="https://media.licdn.com/dms/image/C4E03AQGVYCZp-FQjTw/profile-displayphoto-shrink_200_200/0/1517463069285?e=2147483647&v=beta&t=hd8lbh_6IsZW14godPMdrbyKNxO_94UMbCMC6OWB62c"
-        class="image" alt="My Pic in blue Jacket">
-       
-    </header>
+            class="image" alt="My Pic in blue Jacket">
+    </div>
 
     <section id="About">
         <h2>About</h2>
-        <div> <p>Hey, I'm Pratibha Goswami.<br> I currently reside in California. I have successfully completed my Engineering in B.Tech Information Technology from India. With a total of 6.5 years of experience as a Software Engineer, I have specialized in Java Development, Automation, and Manual Testing.
-            Throughout my career, I have worked in various domains including BFSI Retail Banking, BFSI Investment Banking, and Telecom.
-            At the moment, I am expanding my skills by learning Javascript through Code the Dream. During my leisure time, I enjoy activities such as Painting, Cooking, and Traveling.
-             </p></div>
-       
+        <div>
+            <p>Hey, I'm Pratibha Goswami.<br> I currently reside in California. I have successfully completed my
+                Engineering in B.Tech Information Technology from India. With a total of 6.5 years of experience as a
+                Software Engineer, I have specialized in Java Development, Automation, and Manual Testing.
+                Throughout my career, I have worked in various domains including BFSI Retail Banking, BFSI Investment
+                Banking, and Telecom.
+                At the moment, I am expanding my skills by learning Javascript through Code the Dream. During my leisure
+                time, I enjoy activities such as Painting, Cooking, and Traveling.
+            </p>
+        </div>
+
     </section>
     <section id="Experience">
-      
+
         <h2>Experience</h2>
         <p>I have 6.5 Years of experience in IT Industry</p>
         <div class="columns">
@@ -64,6 +89,7 @@
             </div>
         </div>
     </section>
+
     <section id="Skills">
         <h2>Skills</h2>
         <ul>
@@ -76,36 +102,49 @@
         <h2>Connect</h2>
         <div class="connect">
 
-            <p><a href="https://www.linkedin.com/in/pratibha-goswami-7203a0a7/">LinkedIn</a></p>
-            <p><a href="https://github.com/goswamipratibha88">GIT HUB</a></p>
-            <p><a href="mailto:abc.def@gmail.com">Gmail</a></p>
+            <p><a href="https://www.linkedin.com/in/pratibha-goswami-7203a0a7/"><img id="linkedin"
+                        src="image/linkedin_image.jpg" alt="LinkedIN"></a></p>
+            <p><a href="https://github.com/goswamipratibha88"><img id="github" src="image/github-icon.jpg"
+                        alt="GIT HUB"></a></a></p>
+            <p><a href="mailto:abc.def@gmail.com"><img id="gmail" src="image/email-icon.png" alt="Gmail"></a></p>
 
         </div>
     </section>
 
     <section id="Projects">
         <h2>Projects</h2>
-      
+
     </section>
+
     <section id="Leaveamsg">
         <h2>Leave a Message</h2>
         <form name="leave_message" id="leave_message">
-            <label for = "usersName">Name: </label><br>
-            <input type ="text" id = "usersName" name = "usersName" required = true><br>
-            <label for ="usersEmail">Email: </label><br>
-            <input type ="email" id = "usersEmail" name = "usersEmail" required = true><br>
+            <label for="usersName">Name: </label><br>
+            <input type="text" id="usersName" name="usersName" required=true><br>
+            <label for="usersEmail">Email: </label><br>
+            <input type="email" id="usersEmail" name="usersEmail" required=true><br>
             <label for="usersMessage">Message: </label><br>
-            <textarea id = "usersMessage" name ="usersMessage" required = true></textarea><br>
+            <textarea id="usersMessage" name="usersMessage" required=true></textarea><br>
             <button type="submit" id="submitbutton">Submit</button>
 
         </form>
     </section>
     <section id="viewmessages">
         <h2>Messages</h2>
-        <ul id="messageList">
-        </ul>
+        <table id="messageTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Message</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
 
-</section>
+        </table>
+    </section>
+
     <script src="js/index.js"></script>
 </body>
 

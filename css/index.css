@@ -1,33 +1,71 @@
-body {
-    background-color: white;
-    width: 100%;
-    float: center;
-    
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-nav {
-    /* padding-top: 2%;
-    padding-bottom: 2%; */
-    padding: 0.5%;
-    display: inline;
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
     background-image: linear-gradient(#a9d4f4, #749aec);
-    overflow: hidden;
     position: fixed;
-    top: 0;
-    width: 98%;
+    width: 100%;
 }
 
-nav a {
-
-    color: black;   
-    padding-top: 4vw;
-    padding: 1vw;
+.hamburger {
+    display: none;
 }
 
-a:hover {
-    background-color: lightblue;
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #101010;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 5rem;
+}
+
+.nav-link {
+    font-size: 1rem;
+    font-weight: 400;
     color: black;
+    text-decoration: none;
+}
+
+.nav-link:hover,
+.nav-link:focus{
+    background-color: black;
+    color:white;
     font-weight: 300;
+}
+
+.nav-logo {
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: black;
 }
 
 h1 {
@@ -41,12 +79,13 @@ h1 {
 
 .image {
     display: block;
-    margin: 0 auto;
+    margin: 2% auto;
     border-radius: 50%;
     border: 5px solid #555;
 }
 
 h2 {
+    padding-top: 3%;
     font-weight: 800;
     color: darkolivegreen;
 }
@@ -54,7 +93,6 @@ h2 {
 section {
     margin: 60px;
     padding-top: 2%;
-
 }
 
 #About div {
@@ -65,34 +103,42 @@ section {
     padding: 2%;
     margin: 2%;
     width: 80vw;
-
 }
 
 #Experience p {
     font-family: 'Times New Roman';
     font-size: large;
+    padding-top: 2%;
     padding-left: 2vw;
+}
+
+#Experience a {
+    color: brown;
+    text-decoration: none;
 }
 
 .columns {
     background-image: linear-gradient(#EDF1F4, #C3CBDC);
     width: 80vw;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto;
     padding: 2%;
     margin: 2%;
     font-family: 'Times New Roman';
     font-size: large;
 }
 
-div.column2 li {
-    margin-bottom: 50px;
-    padding-top: 2%;
+div.column1 p {
+    padding-bottom: 5%;
 }
+
+div.column2 li {
+    padding-bottom: 20%;
+}
+
 
 /* skills and project section lists */
 
-
-/* #projects ul { */
 #Skills ul,
 #Projects ul,
 .connect {
@@ -107,8 +153,13 @@ div.column2 li {
     margin: 2%;
     font-family: 'Times New Roman';
     font-size: large;
+}
 
-
+#linkedin,
+#github,
+#gmail {
+    width: 5vw;
+    height: 7vh;
 }
 
 #Skills li,
@@ -118,6 +169,9 @@ div.column2 li {
 
 }
 
+#Projects a {
+    color: brown;
+}
 
 /* style for input fields under Leave a message */
 
@@ -156,37 +210,11 @@ textarea {
     box-sizing: content-box;
 }
 
-#submitbutton{
+#submitbutton {
     background-color: rgb(66, 211, 218);
     width: 10vw;
     padding: 1vw 2vh;
     margin: 1vw 0;
-    border-color: darkcyan;
-    cursor: pointer;
-    font-size: medium;
-
-}
-
-#viewmessages ul {
-    background-image: linear-gradient(#EDF1F4, #C3CBDC);
-    padding: 2%;
-    margin: 2%;
-    width: 80vw;
-    font-family: 'Times New Roman';
-    font-size: large;
-}
-
-#viewmessages li {
-    color: darkcyan;
-
-
-}
-
-#viewmessages button {
-    background-color: peru;
-    width: 10%;
-    padding: 1% 1%;
-    margin: 1% 0;
     border-color: darkcyan;
     cursor: pointer;
     font-size: medium;
@@ -216,42 +244,87 @@ span {
 }
 
 
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th {
+    background-image: linear-gradient(#EDF1F4, #C3CBDC);
+}
+
+td {
+    background-color: aliceblue;
+}
+
+#messageTable {
+
+    padding: 2%;
+    margin: 2%;
+    width: 80vw;
+    font-family: 'Times New Roman';
+    font-size: large;
+}
+
+table {
+    width: 80vw;
+    background-image: linear-gradient(#EDF1F4, #C3CBDC);
+}
+
+
+/* css for smaller screen size */
 
 @media (max-width: 768px) {
-    body {
-        background-color: lightcyan;
-        float: center;
-        border: 10px groove gray;
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
     }
 
-    nav a {
-        display: none;
+
+    .nav-menu.active {
+        left: 0;
     }
 
-    #Projects ul,
-    .connect {
-    list-style-type: square;
-    display: grid;
-    grid-template-columns: auto ;
+    .nav-item {
+        margin: 1rem 0;
     }
 
-    #submitbutton{
-  
-        width: 5vw;
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        position: fixed;
+    }
+
+    #submitbutton {
+
+        width: 15vw;
+        height: 6vh;
         padding: 0;
         margin: 0 0;
         border-color: darkcyan;
         cursor: pointer;
-        font-size:x-small;
-    
+        font-size: small;
+
     }
 
-}
+    h2 {
+        padding-top: 8%;
+    }
 
-@media (min-width: 769px) and (max-width: 1024px) {
-    body {
-        background-color: beige;
-        border: 6px solid darkslategray;
-
+    #Projects ul {
+        display: grid;
+        grid-template-columns: auto;
     }
 }

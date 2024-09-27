@@ -1,3 +1,15 @@
+// Code for hamburger menu
+
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+}
+
 
 // Code for creating footer
 
@@ -12,8 +24,17 @@ let copyright = document.createElement('p');
 copyright.innerHTML = `© ${thisYear} Pratibha Goswami `;
 footer.appendChild(copyright);
 
+const navLink = document.querySelectorAll(".nav-link");
 
-// Code for adding skills in portfolio skills section
+navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+function closeMenu() {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+}
+
+
+//Code for adding skills 
 
 const skills = ["JavaScript", "HTML", "CSS", "GitHub", "SVN", "JAVA", "VSCode", "Eclipse", "XML", "Selenium", "SQL", "HP ALM", "JIRA"];
 let skillsSection = document.querySelector("#Skills");
@@ -24,6 +45,7 @@ for (let i = 0; i < skills.length; i++) {
     skill.innerText = skills[i];
     skillsList.appendChild(skill);
 }
+
 
 // Code for adding git hub repos in portfolio project section 
 
@@ -60,37 +82,31 @@ fetch('https://api.github.com/users/goswamipratibha88/repos')
     })
 
 
-//Code for sending message in 'Leave a Message' section and viewing messages
-
+//code for Leave a message
 let messageForm = document.getElementById("leave_message");
 messageForm.addEventListener('submit', function (event) {
     event.preventDefault();
-    let name = event.target.usersName.value;
-    let email = event.target.usersEmail.value;
-    let userMessage = event.target.usersMessage.value;
 
-    console.log('Name: ', name);
-    console.log('Email: ', email);
-    console.log('Message: ', userMessage);
+    const name = document.getElementById('usersName').value;
+    const email = document.getElementById('usersEmail').value;
+    const message = document.getElementById('usersMessage').value;
 
-    let messageSection = document.getElementById('viewmessages');
-    let messageList = messageSection.querySelector('ul');
-    let newMessage = document.createElement("li");
+    const tableBody = document.querySelector('#messageTable tbody');
+    const row = document.createElement('tr');
 
-    newMessage.innerHTML = `
-    <a href="mailto:${email}">${name}</a>   :  <span>${email}</span>  :  <span>${userMessage}</span>`;
+    row.innerHTML = `
+        <td>${name}</td>
+        <td>${email}</td>
+        <td>${message}</td>
+        <td><button onclick="removeMessage(this)">Remove</button></td>
+    `;
 
-    let removeButton = document.createElement("button");
-    removeButton.innerText = "Remove";
-    removeButton.type = "button";
-    removeButton.addEventListener('click', function () {
-        let entry = removeButton.parentNode;
-        entry.remove();
-
-    });
-
-    newMessage.appendChild(removeButton);
-    messageList.appendChild(newMessage);
+    tableBody.appendChild(row);
     messageForm.reset();
 
 });
+
+function removeMessage(button) {
+    const row = button.parentElement.parentElement;
+    row.remove();
+}
